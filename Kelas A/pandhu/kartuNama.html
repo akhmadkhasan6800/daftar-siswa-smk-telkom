@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kartu Nama</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+    .container{
+        width:100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.8);
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .profile-box{
+        background: rgba(255, 255, 255, 0.1);
+        text-align: center;
+        padding: 80px 60px;
+        color: #fff;
+        position: relative;
+        border-radius: 20px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4),
+        0 4px 30px rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid  rgba(225, 225, 225, 0.2);
+        overflow: hidden;
+    }
+    .profile{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        box-shadow: 0 4px 30px rgba(255, 255, 255, 0.4);
+    }
+    .profile-box button{
+        background: blue;
+        color: white;
+        border: none;
+        outline: none;
+        z-index: 10;
+        position: relative;
+        box-shadow: 0 5px 10px rgba(37, 66, 251, 0.377);
+        padding: 15px 60px;
+        cursor: pointer;
+        border-radius: 30px;
+        margin-bottom: 50px;
+        font-weight: 600px;
+        font-size: 16px;
+    }
+    .profile-bottom{
+        left: 0;
+        bottom: 0;
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 4px 30px rgba(255, 255, 255, 0.4);
+        position: absolute;
+        color: black;
+        padding: 40px;
+        border-radius: 9px;
+    }
+    .profile-box h3{
+        font-size: 30px;
+        margin-top: 20px;
+        font-weight: 600px;
+    }
+    .profile-box p{
+        padding: 10px;
+    }
+    .medos{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center; /* Menengahkan konten secara horizontal */
+    }
+    .medsos img{
+        display: column;
+        width: 30px;
+        margin: 10px 5px;
+        cursor: pointer;
+        border-radius: 50%;
+        box-shadow: 0 4px 30px rgba(255, 255, 255, 0.4);
+    }
+    .medsos .konten{
+        width: 70px;
+        text-align: center;
+        display: inline-block; /* Mengatur elemen .konten berjajar secara horizontal */
+        margin: 10px 10px; /* Mengatur jarak antara .konten */
+    }
+    .medsos .konten a{
+        color: white;
+        cursor: pointer;
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="profile-box">
+            <img src="./profil.jpeg" alt="" class="profile">
+            <h3>Pandhu Arya Munjalindra</h3>
+            <p>Seorang pelajar yang suka Coding</p>
+            <div class="medsos">
+                <div class="konten">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/600px-Instagram_logo_2022.svg.png" alt="" class="instagram">
+                    <a href="https://www.instagram.com/pandhuu._/">Instagram</a>
+                </div>
+                <div class="konten">
+                    <img src="data:image/png;base64,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" alt="" class="facebook">
+                    <a href="https://www.facebook.com/pandhu.munjalindra">Facebook</a>
+                </div>
+                <div class="konten">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHcAAAB3CAMAAAAO5y+4AAAAaVBMVEX///8XFRUAAAATERH09PTp6ekQDQ0GAAC4uLj39/e8vLzw8PD8/PzAwMALBwe0tLSUlJSfn5+Ih4fg4OB2dnYjIiLQ0NArKirY2Nh/fn7LysppaGhMS0thYWE4NzcdHByop6dVVFRBQUEOIdwWAAAE0ElEQVRoge1a2ZaqOhBtKgyiiCAgo4r8/0ceQAKZIAnQ59x1F/utWyqbJDXsFPn5OXDgwIEDBw7owrOiLMsiy/trjOY1KBuY8CqDs/nLnN41t1sqxzYm2E7Hnl9/b+ZF3BIgQwTU/lIWv0Fq1ukc6Uid1nsvuBmmYC+QDksOaXDZkdW7qbAOzPVuG519FFm/zNVjH9oAHGXWDj7cd2C9VKDF2gEaayttoTlZPOXrNtp6MXTmgSDcQnvXX2OMLZu8gbYlzv8J7XriYBvt2qW+baVtiWt92mw7bUusnbpcYwqgrsgp52eqVCLQLRPPabrILrJz8Fqugt/ptfXolD3S6UH46NHWxCoPfhndJcyt6Ij6J8k40MsfkU0wwHn476VlHlbAGeWV4yPMipNyQfAiiDR4S9KpiD2KSvBbrqR6xvcgDMPgHj+rpP2PD89sfMqjrJ/qtFfSEAH506kp68hyif+4VnSLmxv5UEo6oUaJqHzCzq7UX3jAk7T3G1UBcqZC19dYqAExNQDc5BY9Gn9XXvulZlXQmcrXDMEWJa0VFHf4Q1shpM3b0MnNV/IQi03M4MqNKHjcCCoxHHJWqn6BUXAjBApWKVsB4KTJe2V57bfc6MK9rL5s4BQDyHVtzdiovCsHOhKVBAATAzppbgIrGpxSasLUOr9ZQUuV7+/bywzYKFop/B/sMLJIOtEGKFl5qmSiQhqLjCuCfGPEYLS3NIJj5nndnIHBxDDEkuc/dAToC9EBGVtclvfLe1H7guxs8fF5WAkVF/Zrmdelwwglaw/QJjMBSXExWXfeideA5Q7Tf4XX0FG/JKwUbeF11vpVZGzhNWBtz5GtDLq8O+UNGa+bMMuztjsSsg66HEdeReerlWWQK4R+JakvTNlHycrOLuPO0sLP9nD2qr+y/WLl1cpCmLPD1BID1v/1OxQdPLYzANI8wEnQNR7Na3+pCePQ1HFfFS47XYUTEq+59c+hJTeG/KDCeqJuS+aH90012cL36TST5VkwgoJZLDCrNWgFrXKpquvAnSI7w1L1DOxye2uoVrVkUApkWxIUp1w7Alo7UbIdgs9+naPingJ+iSSUaY8oTISdREXHvKDe+NtPMQM8lA1GFT7m9Jb1CCskbtoipJgBhtoAcV+LruMckA+QVmXOligzL7tmoT/TNVXOeNZ7aHW++rCjGu9I9DUsmOXsLN7KmhTnrOHzExVZwi4Ye76npqvSVPliFL92f25138S+CbssXCeFfE8N5TCegp1e5xSTm84IkHR2nfW6QWP0f+P2CvSLcGD7ChOtnm64vHH0GP3f0Qe318W5miu4eHnemlV03DEssKIgLuOgmMmXpxlefXk2+rSSkhXUoJ5W3ZdH4C1Tysxi3hWSoY2eFyY+yx8W8sJLt5Pb45I4eLWkzSQRr5OsvFNhvTFxGkqCX8DrqOdHFhdcBe22IMRBGOSfmTTA80K64QaJOV1m6L84gj+z2RwvVJuuzLis2lLkhXiVSxEIwVfgpfOGv+02wxePFEQfKed5EaS73JRxc+LuyIxfEbwO5FvXGOPRjMpJxmtDs9O1oO+4+CLUMq8Nqe7HFxluSV+Dl3gBkrXtnyU8yi6CxUnI6n4q91xhEu6tntXP9W0vbzpw4MCBAwf+9/gDAPw29HjkRogAAAAASUVORK5CYII=" alt="" class="github">
+                    <a href="https://github.com/Panntod">Github</a>
+                </div>
+            </div>
+            <button type="button">Follow Me</button>
+            <div class="profile-bottom">
+                <p>Terimakasih sudah follow semua akun saya, semoga bermanfaat buat kalian, kunjungi personal website saya <a href="https://pandhu-munjalindra.xyz" style="text-decoration: none;">Pandhu Arya M</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
